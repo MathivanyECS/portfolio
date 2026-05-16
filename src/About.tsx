@@ -98,57 +98,134 @@ export default function About({ isDarkMode }: Props) {
                   <div className="w-14 h-14 rounded-xl flex-shrink-0 overflow-hidden">
                     <img
                       src={profileData.aboutImage}
-                      alt="Rathishan"
+                      alt="Mathivany"
                       className="w-full h-full object-cover"
                     />
                   </div>
+
                   <div className="flex-1">
-                    <h2 className={`text-xl font-bold mb-1 ${tp}`}>Vivekanantharasha Mathivany</h2>
-                    <p style={{ color: CYAN }} className="text-xs font-semibold uppercase tracking-widest mb-3">
-                      Computer Seience Student · Front End Developer
+                    <h2 className={`text-xl font-bold mb-1 ${tp}`}>
+                      Vivekanantharasha Mathivany
+                    </h2>
+
+                    <p
+                      style={{ color: CYAN }}
+                      className="text-xs font-semibold uppercase tracking-widest mb-3"
+                    >
+                      Electronics & Computer Science Student · Full-Stack Developer
                     </p>
+
                     <p className={`text-sm leading-relaxed ${ts}`}>
-                      4th-year B.Sc.Hons Electronics and  Computer Science student at the University of Kelaniya, Sri Lanka.
-                      Passionate about Generative AI, Full-Stack Development
+                      4th-year B.Sc(Hons) Electronics and Computer Science student at the
+                      University of Kelaniya, Sri Lanka. Passionate about Full-Stack
+                      Development, Mobile App Development, Web Development, and also
+                      interested in AI/ML technologies.
                     </p>
                   </div>
                 </div>
+
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {['AI Engineering', 'Full-Stack Dev', 'AI/ML Engineer', 'Software Dev'].map(s => (
-                    <span key={s} className="text-xs px-3 py-1 rounded-full font-medium"
-                      style={{ background: `${CYAN}18`, color: CYAN }}>{s}</span>
+                  {[
+                    'Full-Stack Dev',
+                    'Mobile App Dev',
+                    'Web Development',
+                    'AI/ML',
+                    'Software Dev',
+                  ].map(s => (
+                    <span
+                      key={s}
+                      className="text-xs px-3 py-1 rounded-full font-medium"
+                      style={{ background: `${CYAN}18`, color: CYAN }}
+                    >
+                      {s}
+                    </span>
                   ))}
                 </div>
               </div>
 
               {/* Background + Goals side by side */}
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 flex-1">
+
+                {/* Background */}
                 <div className={`rounded-2xl p-5 ${card}`}>
-                  <h3 className={`text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2 ${tp}`}>
+                  <h3
+                    className={`text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2 ${tp}`}
+                  >
                     <User size={14} style={{ color: CYAN }} /> Background
                   </h3>
-                  <InfoRow icon={<MapPin size={15} />} label="Location" value="Sri Lanka (GMT+5:30)" />
-                  <InfoRow icon={<BookOpen size={15} />} label="University" value="Univ. of Ruhuna" />
-                  <InfoRow icon={<GraduationCap size={15} />} label="Degree" value="B.Sc. Comp. Eng." />
-                  <InfoRow icon={<Languages size={15} />} label="Languages" value="English & Tamil" />
+
+                  <InfoRow
+                    icon={<MapPin size={15} />}
+                    label="Location"
+                    value="Sri Lanka (GMT+5:30)"
+                  />
+
+                  <InfoRow
+                    icon={<BookOpen size={15} />}
+                    label="University"
+                    value="University of Kelaniya"
+                  />
+
+                  <InfoRow
+                    icon={<GraduationCap size={15} />}
+                    label="Degree"
+                    value="B.Sc(Hons) Electronics & Computer Science"
+                  />
+
+                  <InfoRow
+                    icon={<Languages size={15} />}
+                    label="Languages"
+                    value="English & Tamil"
+                  />
                 </div>
+
+                {/* Core Goals */}
                 <div className={`rounded-2xl p-5 ${card}`}>
-                  <h3 className={`text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2 ${tp}`}>
+                  <h3
+                    className={`text-sm font-bold uppercase tracking-widest mb-4 flex items-center gap-2 ${tp}`}
+                  >
                     <Target size={14} style={{ color: CYAN }} /> Core Goals
                   </h3>
+
                   <div className="flex flex-col gap-3">
                     {[
-                      { n: 'AI/ML Engineer', d: 'LLM agentic systems', e: '🤖' },
-                      { n: 'Open Source', e: '🌍' },
-                      { n: 'Full-Stack', d: 'End-to-end premium apps', e: '⚡' },
+                      {
+                        n: 'Full-Stack Developer',
+                        d: 'Modern web & backend applications',
+                        e: '💻',
+                      },
+                      {
+                        n: 'Mobile App Developer',
+                        d: 'Cross-platform mobile applications',
+                        e: '📱',
+                      },
+                      {
+                        n: 'Web Developer',
+                        d: 'Responsive modern websites',
+                        e: '🌐',
+                      },
+                      {
+                        n: 'AI/ML Enthusiast',
+                        d: 'Exploring intelligent systems',
+                        e: '🤖',
+                      },
                     ].map((g, i) => (
-                      <div key={i} className={`flex items-center gap-3 p-3 rounded-xl ${innerCard}`}>
+                      <div
+                        key={i}
+                        className={`flex items-center gap-3 p-3 rounded-xl ${innerCard}`}
+                      >
                         <span className="text-xl">{g.e}</span>
+
                         <div>
                           <p className={`text-sm font-bold ${tp}`}>{g.n}</p>
                           <p className={`text-xs ${ts}`}>{g.d}</p>
                         </div>
-                        <ChevronRight size={14} className="ml-auto" style={{ color: CYAN }} />
+
+                        <ChevronRight
+                          size={14}
+                          className="ml-auto"
+                          style={{ color: CYAN }}
+                        />
                       </div>
                     ))}
                   </div>
@@ -206,9 +283,9 @@ export default function About({ isDarkMode }: Props) {
                   {[
                     { y: '2027', label: 'Expected Graduation', sub: 'B.Sc.Hons Electronics and Computer Seience', done: false },
                     { y: '2025', label: 'B.Sc.Hons Electronics and Computer Seience', sub: 'Selected Path', done: true },
-                    { y: '2024', label: 'B.Sc.Hons Electronics and Computer Seience', sub: 'University of Kelaniya', done: true },
+                    { y: '2023', label: 'B.Sc.Hons Electronics and Computer Seience', sub: 'University of Kelaniya', done: true },
                     { y: '2021', label: 'A/L Completed', sub: 'Physical Science Stream', done: true },
-                    { y: '2019', label: 'A/L Studies Began', sub: "KN/St.Theresa's girls college", done: true, link: 'https://www.facebook.com/share/g/1CBMDWqCH5/' },
+                    { y: '2019', label: 'A/L Studies Began', sub: "KN/St.Theresa's girls college", done: true, link: 'https://www.facebook.com/profile.php?id=61553301508093' },
                   ].map((step, i, arr) => (
                     <div key={i} className={`relative flex items-start gap-4 ${i < arr.length - 1 ? 'pb-6' : ''}`}>
                       {/* Node */}
