@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github, BookOpen, MapPin, ArrowUpRight, CheckCircle2, X
 
 interface Props { isDarkMode: boolean; }
 
-const CYAN = '#00abf0';
+const CYAN = '#0ea5e9';
 
 export default function Contact({ isDarkMode }: Props) {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -55,25 +55,17 @@ export default function Contact({ isDarkMode }: Props) {
   const tp = isDarkMode ? 'text-white' : 'text-slate-800';
   const ts = isDarkMode ? 'text-gray-400' : 'text-slate-500';
   const inputBorder = isDarkMode ? 'border-white/10 text-white' : 'border-slate-200 text-slate-800';
-  const focusBorder = 'focus:border-[#00abf0] focus:outline-none';
+  const focusBorder = 'focus:border-[#0ea5e9] focus:outline-none';
   const card = isDarkMode
     ? 'bg-white/[0.03] border border-white/[0.08] backdrop-blur-md'
     : 'bg-white border border-slate-100 shadow-md';
 
-  const IeeeIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      <path d="M8 11h8M8 15h8M12 7v8" />
-    </svg>
-  );
-
   const presence = [
-    { label: 'Email', sub: 'rathishan2103@gmail.com', icon: <Mail className="w-5 h-5" />, link: 'mailto:rathishanm@gmail.com', color: '#EA4335' },
-    { label: 'LinkedIn', sub: 'rathishan-mahendran', icon: <Linkedin className="w-5 h-5" />, link: 'https://linkedin.com/in/rathishan-mahendran', color: '#0A66C2' },
-    { label: 'GitHub', sub: 'skr2rathishan-oss', icon: <Github className="w-5 h-5" />, link: 'https://github.com/skr2rathishan-oss', color: isDarkMode ? '#E6EDF3' : '#24292F' },
-    { label: 'IEEE', sub: 'IEEE Student Branch', icon: <IeeeIcon />, link: '#', color: '#00629B' },
-    { label: 'University', sub: 'Univ. of Ruhuna', icon: <BookOpen className="w-5 h-5" />, link: '#', color: '#7C3AED' },
-    { label: 'Location', sub: 'Sri Lanka · GMT+5:30', icon: <MapPin className="w-5 h-5" />, link: '#', color: '#10B981' },
+    { label: 'Email', sub: 'mathivmathy@gmail.com', icon: <Mail className="w-5 h-5" />, link: 'mailto:mathivmathy@gmail.com', color: '#EA4335' },
+    { label: 'LinkedIn', sub: 'mathivany-vivekanantharasa', icon: <Linkedin className="w-5 h-5" />, link: 'https://www.linkedin.com/in/mathivany-vivekanantharasa-b4743b349/', color: '#0A66C2' },
+    { label: 'GitHub', sub: 'MathivanyECS', icon: <Github className="w-5 h-5" />, link: 'https://github.com/MathivanyECS', color: isDarkMode ? '#E6EDF3' : '#24292F' },
+    { label: 'University', sub: 'University of Kelaniya', icon: <BookOpen className="w-5 h-5" />, link: '#', color: '#7C3AED' },
+    { label: 'Location', sub: 'Sri Lanka · GMT+5:30', icon: <MapPin className="w-5 h-5" />, link: '#', color: '#0ea5e9' },
   ];
 
   return (
@@ -140,12 +132,12 @@ export default function Contact({ isDarkMode }: Props) {
               type="submit"
               disabled={status === 'loading'}
               className={`-mt-1 self-start flex items-center gap-3 px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 disabled:opacity-50 ${isDarkMode
-                  ? 'bg-[#00abf0] text-[#081b29] hover:shadow-[0_0_20px_rgba(0,171,240,0.5)] hover:-translate-y-0.5'
-                  : 'bg-[#00abf0] text-white hover:shadow-[0_8px_20px_rgba(0,171,240,0.4)] hover:-translate-y-0.5'
+                  ? 'bg-[#0ea5e9] text-[#0f172a] hover:shadow-[0_0_20px_rgba(0,171,240,0.5)] hover:-translate-y-0.5'
+                  : 'bg-[#0ea5e9] text-white hover:shadow-[0_8px_20px_rgba(0,171,240,0.4)] hover:-translate-y-0.5'
                 }`}
             >
               {status === 'loading' ? (
-                <><span className="w-4 h-4 border-2 border-t-transparent border-[#081b29] rounded-full animate-spin" /> Sending</>
+                <><span className="w-4 h-4 border-2 border-t-transparent border-[#0f172a] rounded-full animate-spin" /> Sending</>
               ) : (
                 <><Send size={15} /> Send Message</>
               )}

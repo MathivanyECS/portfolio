@@ -79,63 +79,52 @@ export const profileData: ProfileInfo = {
 export const projectsData: Project[] = [
   {
     // ★ FEATURED project — full-width hero card
-    title: 'E-Commerce Mini-Project',
-    description: 'A fully responsive Vue 3 e-commerce SPA featuring real-time product search, cart management, JWT auth, and pagination — consuming the DummyJSON REST API.',
-    image: '/projects/Ecommerce-miniproject.jpg',
+    title: 'SkillLink Platform',
+    description: 'A university skill-sharing and collaboration platform where students can share and learn skills, build their portfolios, and collaborate on projects and hackathons. Led the team and developed the Authentication Module.',
+    image: '/projects/SkillLink.jpg',
     weight: 3,
     complexity: 'high',
     tags: [
-      { name: 'Vue 3', level: 'core' },
-      { name: 'Tailwind CSS', level: 'core' },
+      { name: 'React', level: 'core' },
+      { name: 'Spring Boot', level: 'core' },
+      { name: 'MongoDB', level: 'core' },
       { name: 'TypeScript', level: 'supporting' },
-      { name: 'DummyJSON', level: 'supporting' },
-      { name: 'Vite', level: 'exposure' },
+      { name: 'Java', level: 'supporting' },
     ],
-    codeLink: 'https://github.com/skr2rathishan-oss/Mini-Project',
-    demoLink: 'https://miniproject584.netlify.app/',
+    codeLink: 'https://github.com/MathivanyECS/skilllink-platform',
   },
   {
-    title: 'Personalized Study Buddy',
-    description: 'An AI-driven study companion that personalises learning paths and tracks progress using TypeScript-first architecture.',
-    image: '/projects/StudyBuddy.jpg',
+    // ★ FEATURED project — full-width hero card
+    title: 'University Hostel Management System',
+    description: 'Developed a web-based Hostel Management System to simplify hostel room allocation and request management for students and administrators. Features separate interfaces for students and admins, making the process more organized and efficient.',
+    image: '/projects/Hostel_Management_System.jpeg',
+    weight: 3,
+    complexity: 'high',
+    tags: [
+      { name: 'PHP', level: 'core' },
+      { name: 'MySQL', level: 'core' },
+      { name: 'JavaScript', level: 'supporting' },
+      { name: 'HTML', level: 'supporting' },
+      { name: 'CSS', level: 'supporting' },
+    ],
+    codeLink: 'https://github.com/MathivanyECS/hostel-management-system',
+    demoLink: 'https://drive.google.com/file/d/1rj4GtkmEYGzJpO4GIuRWwEseqL-qWIye/view?usp=sharing',
+  },
+  {
+    title: 'Hardware Tracker System',
+    description: 'Developed a desktop-based Hardware Tracker System to streamline hardware store operations and improve inventory management efficiency. Provides secure management of products, billing, and reporting with real-time database updates.',
+    image: '/projects/Hardware_Management.jpeg',
     weight: 2,
     complexity: 'medium',
     tags: [
-      { name: 'TypeScript', level: 'core' },
-      { name: 'React', level: 'core' },
-      { name: 'Vite', level: 'supporting' },
+      { name: 'C#', level: 'core' },
+      { name: '.NET', level: 'core' },
+      { name: 'SQL Server', level: 'supporting' },
+      { name: 'SSMS', level: 'exposure' },
+      { name: 'RDLC Reports', level: 'exposure' },
     ],
-    codeLink: 'https://github.com/skr2rathishan-oss/Personalized-Study-Buddy',
-    // no demoLink — only GitHub button will render
-  },
-  {
-    title: 'Web Dev Collection',
-    description: 'Curated showcase of responsive UI experiments exploring animations, design systems, and modern CSS techniques.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    weight: 1,
-    complexity: 'low',
-    tags: [
-      { name: 'HTML', level: 'core' },
-      { name: 'CSS', level: 'core' },
-      { name: 'JavaScript', level: 'core' },
-    ],
-    codeLink: 'https://github.com/skr2rathishan-oss/Web_Development_Projects',
-    // no demoLink
-  },
-  {
-    title: 'AI & Machine Learning Projects',
-    description: 'Collection of ML experiments covering data analysis, model training, computer vision, and NLP using the Python ML ecosystem.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    weight: 2,
-    complexity: 'high',
-    tags: [
-      { name: 'Python', level: 'core' },
-      { name: 'TensorFlow', level: 'core' },
-      { name: 'PyTorch', level: 'supporting' },
-      { name: 'scikit-learn', level: 'supporting' },
-    ],
-    codeLink: 'https://github.com/skr2rathishan-oss/AI-ML--Projects',
-    // no demoLink
+    codeLink: 'https://github.com/MathivanyECS/Hardware-Tracker',
+    demoLink: 'https://drive.google.com/file/d/1fsA03pPf8B6IYDaegL5BbrSUjp6dpHZd/view?usp=sharing',
   },
 ];
 
@@ -156,72 +145,83 @@ export const educationData: Education[] = [
 
 export const certificationsData: Certification[] = [
   {
-    name: 'Generative AI Chatbot Bootcamp',
-    issuer: 'DevTown',
-    year: 'March 2026',
-    image: '/Certificates/Devtown.jpg',
-    color: '#00abf0',
-    credentialLink: 'https://cert.devtown.in/verify/1Deezj',
-    skillsLearned: ['Ai Agent Building']
+    name: 'Certificate in Web Designing',
+    issuer: 'University of Kelaniya - Sri Lanka',
+    year: 'July 2025',
+    image: '/Certificates/Web Designing.jpeg',
+    color: '#0ea5e9',
+
+    // image path for certificate preview
+    credentialLink: '/Certificates/Web Designing.jpeg',
+
+    skillsLearned: ['Web Design', 'Joomla!']
   },
+
   {
-    name: 'GitHub Actions Learning',
-    issuer: 'GitHub Actions Learning (by Nisal Gunawardhana)',
-    year: 'February 2026',
-    image: '/Certificates/Github Actions.png',
-    color: '#00abf0',
-    credentialLink: 'https://github.com/nisalgunawardhana/github-actions-learning/issues/85#issuecomment-3848795415',
-    skillsLearned: ['GitHub']
+    name: 'Python for Beginners',
+    issuer: 'University of Moratuwa',
+    year: 'November 2025',
+    image: '/Certificates/Python_for_Beginners_E-Certificate.jpg',
+    color: '#0ea5e9',
+
+    credentialLink: '/Certificates/Python_for_Beginners_E-Certificate.jpg',
+
+    skillsLearned: ['Python Programming']
   },
+
   {
-    name: 'Generative AI Handbook',
-    issuer: 'Educative',
-    year: 'December 2025',
-    image: '/Certificates/educative.jpg',
-    color: '#00abf0',
-    credentialLink: 'https://www.educative.io/verify-certificate/985KjktxAO7yklNVyH0jWo6rDgkVhN',
-    skillsLearned: ['LLMs', 'RAGs', 'Fine-tuning', 'Prompt Engineering']
-  },
-  {
-    name: 'AI/ML Engineer - Stage 1',
-    issuer: 'SLIIT',
+    name: 'Introduction to Information Security',
+    issuer: 'HashX',
     year: 'October 2025',
-    image: '/Certificates/sliit_logo.jpg',
-    color: '#00abf0',
-    credentialLink: 'https://code.sliit.org/certificates/veaysmvojn',
-    skillsLearned: ['Image Processing', 'Computer Vision']
+    image: '/Certificates/Introduction to Information Security.jpeg',
+    color: '#0ea5e9',
+
+    credentialLink: '/Certificates/Introduction to Information Security.jpeg',
+
+    skillsLearned: ['Cybersecurity']
   }
 ];
 
 export const achievementsData: Achievement[] = [
   {
-    title: 'CodeBlast 2025 Hackathon',
-    org: 'University of Ruhuna & SLT Mobitel',
+    title: 'SLT Mobitel TechNovation 2025 - Finalist',
+    org: 'SLT Mobitel',
     year: '2025',
-    image: 'https://cdn-icons-png.flaticon.com/512/888/888846.png',
-    badge: 'Competition',
-    badgeColor: '#00abf0',
-    link: 'https://www.linkedin.com/posts/rathishan-mahendran-39812b316_codeblast2025-rextro2025-universityofruhuna-activity-7410300981302886402-QD_x',
-    skillsGained: ['MSPACE APIs', 'Microsoft Azure', 'Backend Development', 'Model Training & Inference']
+
+    image: '/Achievements/SLTMobital_Final.jpeg',
+
+    badge: 'Finalist',
+    badgeColor: '#0ea5e9',
+
+    link: '/Achievements/SLTMobital_Final.jpeg',
+
+    skillsGained: [
+      'Innovation Development',
+      'Problem Solving',
+      'Technology Solutions',
+      'Team Collaboration'
+    ]
+  },
+
+  {
+    title: 'SLT Mobitel TechNovation 2025 - Semi Finalist',
+    org: 'SLT Mobitel',
+    year: '2025',
+
+    image: '/Achievements/SLTMobital_Semi_Final.jpeg',
+
+    badge: 'Semi Finalist',
+    badgeColor: '#0ea5e9',
+
+    link: '/Achievements/SLTMobital_Semi_Final.jpeg',
+
+    skillsGained: [
+      'Innovation Development',
+      'Creative Thinking',
+      'Presentation Skills',
+      'Teamwork'
+    ]
   }
 ];
 
-export const communityData: CommunityRole[] = [
-  {
-    name: 'AI & Data Science Innovation Club Of Ruhuna Engineering',
-    role: 'AI Knowledge Disseminator (Part-time)',
-    org: 'University of Ruhuna',
-    desc: 'Contributed to AI knowledge dissemination within the university and broader external community.',
-    image: 'https://cdn-icons-png.flaticon.com/512/306/306232.png',
-    color: '#00abf0',
-    link: 'https://theicore.org/'
-  },
-  {
-    name: 'IEEE Member',
-    role: 'Active Member',
-    org: 'IEEE (Global)',
-    desc: 'Actively participated in technical workshops and research discussions focused on advancements in AI engineering. Engaged in professional development activities and networking initiatives to foster innovation.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/IEEE_logo.svg/1200px-IEEE_logo.svg.png',
-    color: '#00abf0'
-  }
-];
+

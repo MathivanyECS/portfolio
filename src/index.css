@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 .modern-grid-bg {
   position: absolute;
   inset: 0;
@@ -7,8 +11,8 @@
   height: 100%;
   background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(0, 171, 240, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 171, 240, 0.15) 1px, transparent 1px);
+    linear-gradient(to right, rgba(14, 165, 233, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.15) 1px, transparent 1px);
   mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 10%, transparent 70%);
   animation: grid-pan 20s linear infinite;

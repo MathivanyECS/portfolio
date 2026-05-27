@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { User, Target, GraduationCap, Award, Trophy, Users, MapPin, BookOpen, Languages, ChevronRight, ExternalLink } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
-import { profileData, educationData, certificationsData, achievementsData, communityData } from './data';
+import { motion, AnimatePresence } from 'framer-motion';
+import { profileData, educationData, certificationsData, achievementsData } from './data';
 
 interface Props { isDarkMode: boolean; }
 
@@ -13,12 +13,12 @@ const tabs = [
 
 ];
 
-const CYAN = '#00abf0';
+const CYAN = '#0ea5e9';
 
 export default function About({ isDarkMode }: Props) {
   const [activeTab, setActiveTab] = useState('overview');
 
-  const bg = isDarkMode ? 'bg-[#081b29]' : 'bg-[#f8fafc]';
+  const bg = isDarkMode ? 'bg-[#0f172a]' : 'bg-[#f8fafc]';
   const card = isDarkMode
     ? 'bg-white/[0.03] border border-white/[0.07] backdrop-blur-md'
     : 'bg-white border border-slate-100 shadow-md';
@@ -27,8 +27,8 @@ export default function About({ isDarkMode }: Props) {
   const divider = isDarkMode ? 'border-white/[0.06]' : 'border-slate-100';
   const innerCard = isDarkMode ? 'bg-white/[0.03] border border-white/[0.06]' : 'bg-slate-50 border border-slate-100';
   const tabActive = isDarkMode
-    ? 'bg-[#00abf0]/10 text-[#00abf0] border-l-2 border-[#00abf0]'
-    : 'bg-[#00abf0]/10 text-[#00abf0] border-l-2 border-[#00abf0]';
+    ? 'bg-[#0ea5e9]/10 text-[#0ea5e9] border-l-2 border-[#0ea5e9]'
+    : 'bg-[#0ea5e9]/10 text-[#0ea5e9] border-l-2 border-[#0ea5e9]';
   const tabIdle = isDarkMode
     ? 'text-gray-400 hover:bg-white/[0.04] hover:text-white border-l-2 border-transparent'
     : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800 border-l-2 border-transparent';
@@ -255,7 +255,7 @@ export default function About({ isDarkMode }: Props) {
                             href={e.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`text-xs mt-0.5 hover:text-[#00abf0] transition-colors duration-200 underline underline-offset-2 ${ts}`}
+                            className={`text-xs mt-0.5 hover:text-[#0ea5e9] transition-colors duration-200 underline underline-offset-2 ${ts}`}
                           >{e.school}</a>
                         ) : (
                           <p className={`text-xs ${ts} mt-0.5`}>{e.school}</p>
@@ -263,7 +263,7 @@ export default function About({ isDarkMode }: Props) {
                         <p className={`text-xs ${ts}`}>{e.period}</p>
                       </div>
                       <span className={`text-xs px-2.5 py-1 rounded-full font-semibold ${e.status === 'In Progress'
-                        ? 'bg-[#00abf0]/15 text-[#00abf0]' : 'bg-emerald-500/15 text-emerald-400'}`}>
+                        ? 'bg-[#0ea5e9]/15 text-[#0ea5e9]' : 'bg-emerald-500/15 text-emerald-400'}`}>
                         {e.status}
                       </span>
                     </div>
@@ -321,7 +321,7 @@ export default function About({ isDarkMode }: Props) {
                             href={(step as any).link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`text-xs mt-0.5 hover:text-[#00abf0] transition-colors duration-200 underline underline-offset-2 ${ts}`}
+                            className={`text-xs mt-0.5 hover:text-[#0ea5e9] transition-colors duration-200 underline underline-offset-2 ${ts}`}
                           >{step.sub}</a>
                         ) : (
                           <p className={`text-xs mt-0.5 ${ts}`}>{step.sub}</p>
@@ -341,7 +341,7 @@ export default function About({ isDarkMode }: Props) {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {certificationsData.map((cert, i) => (
-                    <div key={i} className={`flex flex-col gap-2.5 p-3.5 rounded-xl ${innerCard} group hover:border-[#00abf0]/40 transition-colors`}>
+                    <div key={i} className={`flex flex-col gap-2.5 p-3.5 rounded-xl ${innerCard} group hover:border-[#0ea5e9]/40 transition-colors`}>
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden"
                           style={{ border: `1px solid ${cert.color}40`, background: `${cert.color}10` }}>
@@ -371,7 +371,7 @@ export default function About({ isDarkMode }: Props) {
                           className="flex items-center justify-center gap-1.5 w-full py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 hover:opacity-90"
                           style={{ background: `${cert.color}18`, color: cert.color, border: `1px solid ${cert.color}30` }}
                         >
-                          <ExternalLink size={11} /> View Credential
+                          <ExternalLink size={11} /> View Certificate
                         </a>
                       ) : (
                         <div
@@ -423,7 +423,7 @@ export default function About({ isDarkMode }: Props) {
                         <a href={a.link} target="_blank" rel="noopener noreferrer"
                           className="flex items-center justify-center gap-1.5 w-full py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 hover:opacity-90"
                           style={{ background: `${a.badgeColor}15`, color: a.badgeColor, border: `1px solid ${a.badgeColor}30` }}>
-                          <ExternalLink size={11} /> View on LinkedIn
+                          <ExternalLink size={11} /> View Certificate
                         </a>
                       )}
                     </div>
@@ -434,7 +434,7 @@ export default function About({ isDarkMode }: Props) {
               {/* Stats row */}
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { n: '3+', l: 'Awards', e: '🏆' },
+
                   { n: '10+', l: 'Projects', e: '💻' },
                   { n: '2+', l: 'Years Coding', e: '⚡' },
                 ].map((s, i) => (
